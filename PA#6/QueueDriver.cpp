@@ -1,0 +1,60 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+#include"Queue.h"
+
+void testEmpty() {
+
+  cout << "Testing if this bitch is empty!!" << endl;
+  
+  Queue que;
+
+  cout << "isEmpty: " << boolalpha << que.isEmpty() << endl;
+
+}
+
+void testEnqueue() {
+
+  cout << "Now we testing if this bitch ques!" << endl;
+
+  Queue wang;
+
+  cout << "isEmpty: " << boolalpha << wang.isEmpty() << endl;
+
+  wang.enqueue("Terminator 2");
+
+  cout << "Top: " << wang.dequeue() << endl;
+}
+void testEnqueuePlus() {
+
+  cout << "Now we testing if this bitch ques!" << endl;
+
+  Queue wang;
+
+  cout << "isEmpty: " << boolalpha << wang.isEmpty() << endl;
+
+  wang.enqueue("Terminator 2");
+  wang.enqueue("Trouble in China");
+  wang.enqueue("Mortal Kombat");
+  wang.enqueue("Mortal Kombat 2");
+
+  cout << "Count is: " << wang.size() << endl;
+  
+  cout << "Top: " << wang.dequeue() << endl;
+  
+  cout << "Top: " << wang.dequeue() << endl;
+
+  cout << "Top: " << wang.dequeue() << endl;
+  
+  cout << "Top: " << wang.dequeue() << endl;
+  
+  cout << "Count is: " << wang.size() << endl;
+}
+
+int main(){
+  testEmpty();
+  testEnqueue();
+  testEnqueuePlus();
+
+}

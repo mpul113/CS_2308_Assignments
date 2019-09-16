@@ -1,0 +1,46 @@
+//put your header here
+
+#include<cassert>
+#include <string>
+using namespace std;
+
+class Stack {
+private:
+  // define a Node to store strings and the head or top variable here
+  struct Node
+  {
+    string data;
+    Node* next;
+  };
+
+  Node* head;
+
+public:
+  Stack() { head = NULL; }
+    void push(string x) ;
+    string pop() ;
+    bool isEmpty() { return (head == NULL); }
+};
+
+void Stack::push(string newNew) {
+
+  Node* temp = new Node;
+  temp->data = newNew;
+  temp->next = nullptr;
+
+  temp->next = head;
+  head = temp;
+}
+
+string Stack::pop() {
+
+  assert(!isEmpty());
+  
+  string value = head->data;
+  Node* p = head;
+  head = head->next;
+  delete p;
+
+  return value;
+}
+
